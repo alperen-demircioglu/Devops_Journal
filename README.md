@@ -2,7 +2,6 @@
 
 [![Certification: LFCS](https://img.shields.io/badge/Certified-LFCS-blue?logo=linux-foundation&logoColor=white)](#)
 [![Target Certs: KCNA | CKA | AWS SAA](https://img.shields.io/badge/Target_Certs-KCNA%20%7C%20CKA%20%7C%20AWS_SAA-326CE5?logo=kubernetes&logoColor=white)](#)
-[![OS: Arch Linux](https://img.shields.io/badge/OS-Arch%20Linux%20Hardened-blueviolet?logo=arch-linux&logoColor=white)](#)
 [![Methodology](https://img.shields.io/badge/Methodology-Raw_to_Refined-success)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
