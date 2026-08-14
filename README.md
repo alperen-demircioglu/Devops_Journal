@@ -10,13 +10,18 @@
 
 ---
 
-## 👨‍💻 Engineering Profile & Core Competencies
+## 👨‍💻 Profile & Core Background
 
-- **Comprehensive Linux Expertise:** Possess in-depth knowledge and hands-on proficiency in the Linux operating system, including system internals, storage (LVM), advanced networking, kernel tuning, and security hardening.
-- **Daily Hands-On DevOps Practice:** Actively and practically apply this knowledge and proficiency on a daily basis across Linux, Docker, and Kubernetes DevOps workflows.
-- **20 Years of Practical Experience:** Bring 20 years of hands-on, practical experience in the Linux ecosystem.
-- **Autonomous Setup & Hardening:** Capable of installing, configuring, and operating a secured (hardened) Arch Linux distribution from scratch without relying on any external guides.
-- **Current Certification:** Hold the **LFCS** (Linux Foundation Certified System Administrator) certification.
+Bridging **enterprise network security infrastructure** with **low-level Linux systems and Cloud-Native platforms**.
+
+### 🌐 Enterprise Networking & Security Background
+* **NGFW & Firewall Administration:** Actively configure, maintain, and enforce security policies across corporate Next-Generation Firewalls (NGFW), bringing deep packet inspection and network perimeter defense expertise to cloud-native architectures.
+* **Network Device Engineering:** Hands-on administration and configuration of enterprise network switching, routing, VLAN segmentation, and telemetry infrastructure.
+
+### 🐧 Systems, Linux & DevOps Core
+* **Adequate Linux Expertise:** Possess adequate knowledge and hands-on proficiency in the Linux operating system, including system internals, storage (LVM), advanced networking, kernel tuning, and security hardening.
+* **Daily Hands-On DevOps Objective:** Actively and practically apply this knowledge and proficiency on a daily basis across Linux, Docker, and Kubernetes DevOps workflows.
+* **Current Certification:** Hold the **LFCS** (Linux Foundation Certified System Administrator) certification.
 
 ---
 
