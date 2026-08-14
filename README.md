@@ -6,13 +6,9 @@
 [![Methodology](https://img.shields.io/badge/Methodology-Raw_to_Refined-success)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> *"The difference between merely running commands on a system and understanding how it behaves across the kernel, network, and isolation layers is where engineering begins."*
-
 ---
 
 ## 👨‍💻 Profile & Core Background
-
-Bridging **enterprise network security infrastructure** with **low-level Linux systems and Cloud-Native platforms**.
 
 ### 🌐 Enterprise Networking & Security Background
 * **NGFW & Firewall Administration:** Actively configure, maintain, and enforce security policies across corporate Next-Generation Firewalls (NGFW), bringing deep packet inspection and network perimeter defense expertise to cloud-native architectures.
@@ -21,7 +17,7 @@ Bridging **enterprise network security infrastructure** with **low-level Linux s
 ### 🐧 Systems, Linux & DevOps Core
 * **Adequate Linux Expertise:** Possess adequate knowledge and hands-on proficiency in the Linux operating system, including system internals, storage (LVM), advanced networking, kernel tuning, and security hardening.
 * **Daily Hands-On DevOps Objective:** Actively and practically apply this knowledge and proficiency on a daily basis across Linux, Docker, and Kubernetes DevOps workflows.
-* **Current Certification:** Hold the **LFCS** (Linux Foundation Certified System Administrator) certification.
+* **Current Certification:** Holding the **LFCS** (Linux Foundation Certified System Administrator) certification.
 
 ---
 
