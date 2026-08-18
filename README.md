@@ -10,7 +10,7 @@
 ## 👨‍💻 Profile & Core Background
 
 ### 🌐 Enterprise Networking & Security Background
-* **NGFW & Firewall Administration:** Actively configure, maintain, and enforce security policies across corporate Next-Generation Firewalls (NGFW), bringing deep packet inspection and network perimeter defense expertise to cloud-native architectures.
+* **NGFW & Firewall Administration:** Actively configure, maintain, and enforce security policies across corporate Next-Generation Firewalls (NGFW)
 * **Network Device Engineering:** Hands-on administration and configuration of enterprise network switching, routing, VLAN segmentation, and telemetry infrastructure.
 
 ### 🐧 Systems, Linux & DevOps Core
