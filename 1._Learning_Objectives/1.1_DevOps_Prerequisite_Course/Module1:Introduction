@@ -7,11 +7,144 @@ Process:
 
 Section 1: Introduction
 
+	Intro: 
+		1. In this section, trainer Mumshad Mamnanbeth talks about the necessity of this course.
+	Process:
+		1. He emphasizes the importance of having a strong fundamentals about the cloud&devops path.
+		2. Explains the necessity to be able to answer the following questions
+			3.1 Which environment is best suited for running our lab? Cloud or on-prem
+			3.2 How do we set up an lab environment to maximize our learning 
+			3.3 How do we mitigate the problems which occur when migrating from windows to linux
+			3.4 How do we do networking
+			3.5 How do you build, package and deploy an app written in java, python and nodeJS
+			3.6 Which approaches should we use when troubleshooting web server, application servers and database servers
+			3.7 How do we interpret and use yaml, json and jsonpath files.
+	Conclusion:
+		1. In this section we have answered the question 'why/for what' this course exists, what problems it tries to target/mitigate
+		and what function it aims to serve.
+
 Section 2: Curriculum
+
+	Intro:
+		1. In this section, the trainer gives a brief introduction about other modules in the course.
+	Process:
+
+		1. Linux Basic: It is the operating system we are running our applications on, so we should be pretty well versed with it at some point.
+		2. Networking in Linux: We need to know how these individual servers communicate with each other.
+		3. Source Control Management: This is required so that developers & operations teams work/collab on the same project at the same time without
+			conflicting with each other.
+		4. Application & Build Process: Programming languages and process of turning text into a running application
+		5. Web servers: This component is used to host the files in it's system to the clients. Some products are nginx and httpd
+		6. Databases: This component is used to store user and application data.
+		7. 2 Factor App: Integrate the knowledge and skills learnt in this course to create a LAMP stack applicaton. It has a web front end, web app
+			and a database. Data structure such as json and yaml are also going to be used.
+	Conclusion:
+		1. In this section, i have gained information regarding the exact components/modules in this training course.
+		2. More importantly, i have learnt that these are the fundamental pieces that i need to learn in order to be able to move forward in DevOps.
+		3. I am going to learn about these components by also doing the given labs and then i will put the components together to be able to create the stacked application.
 
 Section 3: DevOps Tools
 
+	Intro:
+		1. Trainer Mumshad Mamnanbeth talks about the numerous numerous tools and technologies which exists in DevOps jobs and emphasizes the point
+			that it could be a bit daunting, since there are so many things to learn.
+		2. In this section he sets out to explain each one of them through telling a story
+	Process
+		1. First Release
+			1.0 Let's say, first i have developed an application, it works on my machine and i can access it on my machine.
+			1.1 I want to share this application with the other users as well
+			1.2 I can host this application on my machine but whenever i close my computer, the website also goes down
+			1.3 To prevent this issue, i need to move my application to a machine/server/VM in a data center which never closes down
+			1.4 Now i have an IP address and i can access to my application with it. But for convenience for me and others, i use a domain
+			name which is easier to remember.
+			1.5 Now that i have my own server in a data center, i can just run my application. Not so fast, we need to satisfy some conditions
+			1.6 First, i need the correct runtime installed on the server which depends on the programming language.
+			1.7 Second, i need to install all the libraries and packages i have used in my application's code.
+			1.8 Now my laptop which i write code became my "development environment" and the server i host my application became the "production
+			environment".
+			1.9 Let's say my website became so popular and started to get requested a lot so as a result i need a better organized process.
+		2. Basic Workflow
+			2.0 At first my initial workflow was just writing the code in text, building it and then moving the executable/binary to the server.
+			2.1 Code is written as text and to be able to turn this into a application which could be run we need to convert this 
+			into an executable or a binary.
+			2.2 To do this build tools are used
+			2.3 Now this process is simple: write code, build it and deploy it to the server
+		3. Scaling collaboration with Git and Github
+			3.0 As the users demands more and more functionality from my website, my developer friends joins me and suddenly we are a team
+			3.1 We want to develop more features for this project together and we are working on the same files at the same time.
+			3.2 Each one of us puts the code we have created into a central hub but this turns into a problem since controlling and managing
+			this process becomes a lot complicated.
+			3.3 To solve this problem we use "git", a distributed version control system which keeps track of every file in the repository
+			and provides mechanicms to get the remote repository to the local machine and vice versa. Github or GitLab may be used for storing
+			remote repositories.
+			3.4 The team is able to collaborate efficiently and effectively without breaking each other's code.
+			3.5 As a single person developing, i used to build the app on my machine. Now we are a team we need another external entity
+			to do this, so errors and mixups does not happen
+		4. Introduction CI/CD for Automated Deployment
+			4.1 Provisioning a dedicated build server is thus necessary.
+			4.2 Since deploying the built application to the production environment without first actually testing it risky.
+			4.3 We also need a "test server"
+			4.4 Now the workflow becomes Develop->Github->Build server->Test server->Production server. Now moving pieces manually from one
+			server to another slow and can be automated with CI/CD tools like github actions, jenkins and gitlab CI/CD.
+			4.5 Remember, we could not just run the application on any server without configuring it first. Yes, we need to determine the
+			exact dependencies both runtime, library and packages and install them on each one of our servers.
+		5. Packaging with Containers
+			5.1 Since doing this manually is both tedious and prone to errors. We need to find a solution, technology to make things easier.
+			5.2 We can use container technologies like docker for this very purpose. Containers are isolated running environments which are
+			easy to configure, deploy and move around.
+			5.3 Developers define all the dependencies in a docker file and pushes it to Github.
+			5.4 Build server pulls the file and builds the docker image from it and now every server can run containers with this image.
+			5.5 Now we have our CI/CD line in check and installing dependencies for our application figured out thanks to container
+			technologies.
+			5.6 Now we have container at our hands and we need to manage containers on many servers to be able to meet with the demands. Doing
+				this manually is just not feasible considering the scale of the operation.
+			5.7 And we need a product/solution/techlonogy for automating this.
+		6. Scaling up with Container Orchestration
+			6.1 To be able to start new containers to meet with the demand and bring them down when unnecessary, restart the failed ones and 
+			provision new ones instead we need a container orchestration technology which is kubernetes.
+			6.2 With kubernetes scaling up, down and healing the containers is automated. Also kubernetes can also auto-scale the underlying
+			infrastructure as well.
+			6.3 Now we also have a way of maintaining and managing containers.
+			6.4 But we still need to servers to be deployed exactly identical to each other. Currently this is done manually, is it possible to
+			automate this with a program?
+		7. Infrastructure as Code/Provisioning of Infrastructure
+			7.1 Each time we require a new server; correct system resources, operating system, storage, kernel settings and software needs to be
+			configured.
+			7.2 Instead of doing these manually on the cloud platform GUI, we can define them as code and use a product called "TerraForm" to
+			do this automatically instead
+			7.3 This makes it easier for us track and change the provisioning configuration of servers.
+			7.4 Now we have handled the automation, tracking, managing provisioning of the infrastructure, we need to be able to complete the
+			remaining configurations after the server is up and running
+		8. Configuration of Infrastructure/Post Provisioning Configuration of Infrastructure
+			8.1 Provisioning the server identically, managing their templates as manifest files is half the job and the remaining is completing
+			it with ansible in the same manner.
+			8.2 With ansible, we can make sure the live configurations of each and every server is the same. We can keep track and manage it 
+			conveniently with git as well
+			8.3 Now that we have completed the whole cycle we need to be able track and monitor our operation.
+		9. Monitoring Infrastructure
+			9.1 We need a way to keep track of and monitor the CPU, RAM, storage i/ops and process status of our whole operation
+			9.2 That is done with prometheus which collects this information and grafana which displays them.	
+	
+	Conclusion:
+
+		1. We have moved together through each stage from manual task to an automated version of it, in a very high level way.
+		2. In this section, i was able to understand each category of tools and reason it was created.
+		3. I do think that understanding exactly why a tool was created, to address what problem comes first and makes it easier for me to
+		understand the context.
 
 Conclusion:
+	
+	1. This course is for setting up foundation for DevOps jobs.
+	2. I am going to be exposed to various components to be able to lay our foundations. After i learn about these components, i am going to put them
+	together to create a stacked app.
+	3. DevOps tools just like any other are created to solve/address/mitigate a problem. In DevOps' and IT's case, this is usually replacing a task
+	done manually with well defined set of instructions for an automated program/technology.
+		3.1 git for collab
+		3.2 CI/CD for moving code/app from one server to another
+		3.3 Containers for packaging dependencies
+		3.4 Kubernetes for autoscaling containers
+		3.5 Terraform for deploying servers from code
+		3.6 Ansible for configuring deployed servers
+		3.7 Prometheus and grafana for monitoring our operation	
 
 
