@@ -1,0 +1,78 @@
+Introduction
+
+	1. In this module there are 6 sections.
+	2. This module's aim/objective is to introduce basic linux knowledge.
+
+Process
+
+	1. Working your way through CLI
+		1.1 The Linux shell and common command-line tools
+			I. Important DevOps technologies like kubernetes and terraform only work in linux os environment
+			II. Since devops process operates in linux environment, to be able to truly master these technologies
+			 i need to know linux os like the back of my hand.
+			III. bourne shell, c shell, z shell , bourne again shell
+			IV. Basic commands: pwd, cd, ls, mv, cp, rm, rmdir, touch, mkdir, echo
+			V. touch is used for creating files and echo can be used to put text into files.
+		1.2 Linux Basic Course: 
+			I. I have completed LFCS, so i won't be going through this
+	2. Labs Introduction:
+		2.1. I am fairly familiar with KodeKloud's labs so i am skipping the video.
+		2.2. I have completed the lab. It mainly asked the usage of touch, rm, mv, cp and mkdir
+	3. Vi Editor:
+		3.1 When a file is first opened with vi, it is currently and command mode. To write to the file 'i' should be pressed
+		3.2 In the command mode:
+			I. Move through pages: arrow keys or h,j,k,l could be used
+			II. Cut: dd
+			III. Copy: yy
+			IV. Paste: p
+			V. Delete a character: x
+			VI. To find some word -> /someword
+		3.3 To write to the file -> :w
+		3.4 To quit file without making any changes -> :q
+		3.5 Write and quit the file -> :wq
+	 	3.6 Vi Lab:
+			I. It asked to see if i was able to use dd,y,p and move around the lines with :9(9th line) etc.
+			II. Also :1,3d+ enter is used for deleting the lines from 1 through 3.
+			II. Also there was a question about using "u" in command mode to undo changes and ctr+r to redo them
+	4. More Linux Commands:
+		4.1 These are introduced; whoami, uname -r, cat /etc/os-release, su, sudo, id and curl. 
+		4.2 Lab: Questions about whoami, su, id, ssh, ls, ping, wget, hostnamectl
+	5. Package Management:
+		5.1 rpm:
+			I. Low level package manager. i is for install, q is for query and e is for uninstall
+			II. Does not resolve dependencies and only targets the spesified package
+		5.2 yum
+			I. High level package manager
+			II Does resolve dependencies and installs them
+		5.3 Local or remote repositories
+			I. There exist multiple repositories which yum or rpm application goes out to fetch packages
+			II. The addresses of said repositories are saved in the local system in the /etc/yum.repod.d/ directory.
+			III. To be able to use other repos we just need to add their addresses to the configuration file.
+		5.4 Upgrading repos
+			I. Repositories may not keep up with some software update schedule and fall back.
+			II. To resolve this we just need to use the official documentation of said software
+		5.5 Lab:
+			I. Using "rpm -q ansible" we can learn if rpm was used to download said package
+			II. Using "sudo dnf install maven" to install maven package
+			III. Use "rpm -e ansible" to remove a package
+	6. Services:
+		6.1 Services are processes which run in the background and are able to automatically start the affiliated binaries according to
+		their configuration files.
+			I.  Service files are located at /etc/systemd/system/ directory
+		6.2 systemctl binary used to interact with the linux services also known as daemons. 
+			I. Some commands are enable, disable, start, stop and status.
+		6.3 There are 3 categories in a service file which are unit, service and install 		
+			I. man systemd.service may be used for help
+		6.4 Lab:
+			I. Questions about syntax of systemctl,
+			II. Using status, stop, start and enable commands
+			III. Finding a services configuration file through status command
+			IV. Examining a services' configuration file and answering the questions
+Conclusion
+	
+	1. Second module of the DevOps Pre-requisite Course was the Linux Basics.
+	2. In this module linux shells, some basic commands, package management, vi and services were taught.
+	3. I have learnt about rpm and remembered systemd.service file syntax.
+
+
+
