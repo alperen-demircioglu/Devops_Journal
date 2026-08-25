@@ -107,11 +107,70 @@ Process
 			VIII. Run a jar file created from the previous step
 				- Appearently -cp is used as option and the groupId is added after the file 
 	4. NodeJS introduction
-	5. NodeJs - NPM
+		4.1 Web sites used to be static with just html and css for some style. With the advent of javascript, client side started to be more dynamic and fun. There came many client side javascript versions, but the server side remained unchanged.
+		4.2 With the invention of NodeJS which can be used in the server side, now the both client and the server side can be unified under the javascript technology.
+		4.3 NodeJS is open source,free, cross platform and the code is hosted on "node.org"
+		4.4 Lab:
+			I. Multiple choice question about nodejs use cases
+			II. Installing latest nodejs to a spesific directory in the system
+	5. NodeJs - NPM: There exist 3 subsections here
+		5.1 Introduction to packages and dependencies
+			I. npm stands for node package manager and it is used for distributing packages/modules/libraries
+			II. "npm search" is used for searching the desired package and "npm install" is used for installing it.
+			III. with "npm -v" we can check the version of the tool
+		5.2 Installing locally and globally
+			I. We can either install a package/library locally: "npm install" is used for this
+			II Or we can install the package globally with "npm -g install"
+		5.3 Internal and external modules
+			I. With basic nodejs installation comes the built in libraries. Which may be found in /usr/lib/node_modules/npm/node_modules
+			II. To download libraries belonging to other javascript frameworks we can just use npm.
+			III. package.json dosyası, uygulamanın ihtiyaç duyduğu gereksinimleri listeler
+		5.4 Lab:
+			I. Question about npm version
+			II. Find the auther of file module
+			III. Install file locally and later globally
+			IV. Question about cloning a nodejs repo and then looking into package.json to find dependencies.
 	6. Python introduction
+		6.1. There are 2 versions of python programming language. Python2 and Python3. Python2 is deprecated
+		6.2. To run python2, python2 interpreter is required and to run python3, python3 environment is required
+		6.3. Both versions of python could be installed and invoked in the same operating system.
+		6.4. These versions are not compatible
+		6.5 Lab:
+			I. Questions about python versions
+			II. Download a certain version of python
+			III. Run a python program  
 	7. Python - pip
+		7.1 Installing with pip
+			I. Just as there are 2 versions of python, there are also 2 verions of pip. So we need to make sure which one is used by default through checking the binary version 
+			II 'pip install' is for installing and 'pip show' is for listing the package
+		7.2 Importing
+			I. In the source code libraries are imported through the "import" keyword
+			II. If there is something wrong with the dependencies, we can look them up and see if it is installed to maybe another directory or maybe it is installed for a different version
+			III. python2 -c 'import sys; print (sys.path)' is used.
+		7.3 Installing with requirements.txt
+			I. Large applications require many dependencies and for convenience, requirements.txt file is provided for easy install
+			II. pip install -r requirements.txt
+		7.4 Upgrading and uninstalling
+			I. 'pip install flask --upgrade' is used for upgrading
+			II. pip uninstall flask' ...
+		7.5 Packaging
+			I. Just like java's jar convention, there are tools to package python programs as well.
+			II. eggs and wheel are packaging tools for python.
+			III. wheel is installed with 'pip install app.whl'
+		7.6 Lab:
+			I. Which version of python does this pip belongs to?
+			II. What is the version of pip 
+			III. Find the install location of a certain package
+			IV. Install a certain package with pip
+			V. Use 'pip search' to find which package is installed and which is not.
+			VI. Employ 'pip install -r' to get the dependency names from the file and install
+			VII. Upgrade then uninstall a package
 
 
 Conclusion
 
-	1.
+	1. I am glad that i have encountered KodeKloud and this course. The creation of this course if really on spot with first teaching for what reason which tool/technology was created in the first place.
+	2. In this course i have revisited the categories of programming languages which are compiled ones and interpreted ones.
+	3. Later i have examined 3 different programming languages and their package management tools. 
+	4. Compiled languages are developed, compiled and then run in their respective running environment
+	5. Interpreted languages are developed and then run in their respective running environment.
