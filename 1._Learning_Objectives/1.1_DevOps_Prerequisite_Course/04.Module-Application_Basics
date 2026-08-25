@@ -7,10 +7,105 @@ Introduction
 
 Process
 
-	1. Introduction to applications
-		1.1 
+	1. Introduction to applications: Java, NodeJS and python are chosen based on stackoverflow popularity survey.
+		1.1 Compiled languages
+			I. In this category, developers write human readable code/source code.
+			II. Then this is compiled(transformed) into a file which is readable/understandable by a spesific machine.
+			III. Finally machine starts to execute the instructions in the compiled file/runs it. 
+		1.2 Interpreted languages
+			I. In this category, developers write human readable code/source code still.
+			II. Without being explicitly compiled, the instructions in the code is executed by the spesific interpreter.
+			III. Actually in this stage there is an invisible period which the code is transformed into bytecode by the python interpreter
+			IV. Then a running environment for that spesific language(pyton virtual machine) translates the bytecode into the machine readable format.
+				- Which allows different architectures and operating systems to be able to execute the same program without it explicitly compiled
+		1.3 Packages, modules and languages
+			I. Once a product/technology/solution is developed and is able to fulfill it's objective. Then it could be supplied to other people so that
+			it can solve their problems as well. Programming field is no different as well.
+			II. So once an set of intructions/set of code is developed it could be shared with other developers. And this shared, inherited code from others
+			is called packages, modules or libraries in the programming field.
+			III. In every aspect of programming, making machines do computation there existed developers before us. So we can put the carefully categorized
+  			code created by them to a good use and not reinvent the wheel by incorporating.
+		1.4 The software development lifecycle in devops
+			I. What is software development cycle, what is devops.
+				- Software development cycle is basically develop, build, test, production from an infrastructure perspective.
+				- Devops is development operations and its objective is to make this process smoother. What does smoother means? It means automating the manual bits.
+
+			II. Git is a source code management tool and it's objective is to solve problems regarding the collaboration of people and teams on the same project.
+			III. Source code needs to be build if the language is compiled and it needs to be done on a dedicated place, so build tools are used for this
+			IV. Source code and build code needs to be transferred to their dedicated destinations, and this used be done manually. So CI/CD tools are used to automate this.
+			V. Applications written using packages/modules/libraries and executed in the running environments, so these should exist in spesific verions in the target operating system.
+			Managing these was done manually, prone to error so container technologies are used to address this problem.
+			VI. Now the running environment of each application is containers. We need a way to scale and manage these running environments/containers and this was done manually.
+			Container management/orchestration technology, kubernetes is used for this.
+			VII. Underlying infrastructure is provisioned manually and kubernetes/container orchestration software lives in it, so they need to be in harmony.
+			To be able to standardize, automate, reduce errors from this provisioning process, terraform is used.
+			VIII. Terraform is used to provision infrastructure and after it's live, there needs to be some configuration done on the system. This was done manually.
+			Now to standardize, automate and reduce errors from the whole process, this part is also automated by the ansible program. In the end all systems are created from standardized files centrally stored
+			in a version control system(git) which is relatively not complex to track, monitor and manage. 
+			IX. In the end we monitor the health of our systems. This was done manually in the past with connecting to each system and when there was a problem. So it was a reactive approach even.
+			To be able to track our systems live and be ready to respond to incidents as soon as possible, we need to view the data on a centralized platform.
+				- Grafana is used for that
+				- Data is collected by the prometheus program
 	2. Java introduction
-	3. Java build packaing
+		2.1 Java is a popular programming language
+		2.2 There exist something called Java Development Kit which is created for streamlining development process. After version 9, it includes
+			I. Java debugger
+			II. Java documentation tool
+			III. Java compiler/build tool
+			IV. Java runtime environment
+			V. jar tool for packaging compiled code and libraries into a single JAR file
+		2.3 Before version 9 JDK did not include java running environment
+			I. Also before version 9, naming convension was 1.8, 1.7 so on.
+		2.4 In linux operating system, installed JDK components are placed in /bin directory
+		2.5 Lab:
+			I. What does JDK stands for
+			II. Which version of java exists on this machine
+			III. Which application is used for documentation
+			IV. Which tool is used for compiling
+			V. Which tool is used for debugging
+			VI. download java 21 and add it to the path variable
+	3. Java build packaging: There are 3 subsections here 
+		3.1 Development stages
+			I. Java source code is developed in an editor
+			II. This source code is transformed into bytecode by the compiler
+			III. Bytecode is then run in the java virtual machine which is a virtual environment that in turn transforms the bytecode into machine readable format
+			IV. Note: This makes java cross-platform, if the JVM can be installed on the os then it could execute the code written in java language.
+		3.2 Manual process
+			I. Source code is developed. Let filename be 'MyClass.java'
+			II. Sourced code is compiled(transformed into bytecode, JVM readable format). 
+				- Command line to compile: "javac MyClass.java" and the output file is 'MyClass'
+			III. Compiled code is run
+				- Command line to run java bytecode: "java MyClass"
+			IV. There exist many java files in a complex programming project and since they work together they need to be bundled/packaged all at once with an utility called 'jar'.
+				- This command is used like tar and the first java file should be the main file.
+				- Command line to package: 'jar cf MyApp.jar MyClass.class Service1.class Service2.class ...'
+			V. To document the source code
+				- Command line: "javadoc -d MyClass.java"
+			VI. Build process overview
+				- javac MyClass.java
+				- java -jar MyApp.jar
+				- javadoc -d 'MyClass.java'	
+		3.3 Automated process
+			I. As always we can automate the carefully defined set of instructions.
+			II. Maven, gradle and ant programs are used in java ecosystem to automate the build process.
+			III. They all have configuration files in which we can define how exactly we want the build process to be
+		3.4 Lab JAR
+			I. Compile the .java file
+			II. What is the name of the newly created build file: MyClass.class
+			III. Run the compiled application: java MyClass
+			IV. Generate documentation
+		3.5 Lab Build & Packaging
+			I. Install ant
+			II. Examine the ant configuration file and answer the questions
+			III. Compile and generate a jar package with ant: "ant jar"
+			IV. Execute the and command to perform all the steps: "ant main"
+			V. Install maven
+			VI. inspect the pom.xml file and identify the artifactId of the application
+			VII. compile and package the application
+				- change to the given directory
+				- use "mvn clean install" command line
+			VIII. Run a jar file created from the previous step
+				- Appearently -cp is used as option and the groupId is added after the file 
 	4. NodeJS introduction
 	5. NodeJs - NPM
 	6. Python introduction
