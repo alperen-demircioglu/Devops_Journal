@@ -1,0 +1,54 @@
+Introduction
+
+	1. This is the fourth module in the DevOps pre-requisite training course.
+	2. Module's name is source control management, is about "git" tool and  consists of 2 sections.
+	3. I know a bit about git and this course's objective is to teach just enough git, so i will skim through the material and do a quick overview
+
+
+Process
+
+	1. Git
+		1.1 It is essential for anyone in IT to know about git basics since that is how we reach for other people's projects and coordinate with other people if we are included in one. And even if we want to keep track of our own project's change history.
+		1.2 Trainer has a commandable hands-on mindset and wants to teach everything and also this bit with practice. So he develops and simple app and we go through the git workflow with this application.
+		1.3 Git workflow
+			I. Change to the root/main directory of the project
+			II. Now we need to enable git in this folder by telling it.
+				-'git initialize' is used for this purpose
+			III. Now we need to put the code on stage first, so we can watch it. It's like putting your play on stage, like a theatre
+				-'git add .' is used
+			IV. Finally we contribute/commit our code to the project's code
+				-"git commit -m 'This is our app'" is used 
+		1.4 Lab:
+			I. Just install git on centOS
+			II. I know how to create a bare repository but i dont know how not to?
+				- 'git init' was just enough apparently
+			III. How to track the changes made?
+				- with 'git status'
+			IV. Just stage and commit a file.
+	2. Git remote repositories
+		2.1 When working collaborately we need a main repository to place and retrieve the code.
+			I. We can install git on on-premise server or use gitlab/github on cloud
+		2.2 we can tell our local git that there is a remote repository
+			I. git remote add <github> <http/ssh_link>
+				- We will be using this name we ourselves have give to push our local code.
+		2.3 To push our code to the remote repository
+			I. git push github main
+		2.4 To clonde/download a remote repository/project
+			I. git clone <link>
+		2.5 To get the recent changes from a repo
+			I. git pull 
+		2.5 Lab
+			I. Remote repositories can actually be at the same server too. A simple question about that
+			II. Questinons about pulling. pushing, cloning, and git basics
+
+Conclusion
+
+	1. I have remembered why exactly we need a centralized source code management system
+	2. Also the difference between the git product and the cloud platforms providing it.
+	3. We can also host our own gitlab instance on prem, free of charge
+
+
+
+
+
+
