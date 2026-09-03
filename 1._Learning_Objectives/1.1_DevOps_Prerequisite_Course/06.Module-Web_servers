@@ -6,10 +6,29 @@ Introduction
 
 Process
 
-	1. 
-	2. 
-	3. 
-	4. 
+	1. Introduction
+		1.1 Application languages
+			I. Java for desktop chat applications and IDEs
+			II. NodeJS for applications requiring high concurrent I/O
+			III. Python for data processing
+		1.2 Application types
+			I. Standalone: An application which works just by itself
+			II. Client-Server: Client and server work together to provide the application functionality
+		1.3 Server Types
+			I. Web server
+			II. Application server
+			III. Database server
+			IV. Email server
+			V. Backup server
+			VI. Chat server
+		1.4 Focus: Focus of this module is web and application servers 
+	2. Web server introduction
+		2.1 
+	3. Apache web server
+	4. Apache tomcat
+	5. Python deploy flask app
+	6. NodeJS deploy express app
+	7. IPs and ports
 
 
 Conclusion
