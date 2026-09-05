@@ -23,17 +23,120 @@ Process
 			VI. Chat server
 		1.4 Focus: Focus of this module is web and application servers 
 	2. Web server introduction
-		2.1 
+		2.1 Client side/Front end technologies: html, css and javascript
+		2.2 Server side/Back end technologies: java, python and javascript
+		2.3 Both front end and back end technologies have frameworks which makes it more convenient to use the programming language
+		2.4 Static vs dynamic web servers:
+			I. Static web servers are known as web servers: apache, nginx
+			II. Dynamic web servers are known as application servers? apache tomcat, unicorn symbol?, UWSGI 
 	3. Apache web server
+		3.1 Apache web server is installed with httpd package.
+		3.2 It could host multiple websites at the same time in single server.
+			I. This is done through virtual hosts inside apache configuration file.
+		3.3 There are access logs and error logs in the /var/log/httpd//access_log and /var/log/httpd/error_log files.
+		3.4 Website html is usually placed at /var/www/html path.
+		3.5 apache web server configuration file is at /etc/httpd/conf/httpd.conf
+		3.6 In apache configuration file we can spesify the domain name of the website
+		3.7 Lab:
+			I. Question about functions of apache web server
+			II. What is the package name of apache web server
+			III. Install and start the service
+			IV. Name of the apache conf file
 	4. Apache tomcat
+		Note: I have seen both apache and apache tomcat vulnerabilities but never had the chance to do research to distinguish
+		between the two
+		4.1 Apache tomcat is used to serve java based applications.
+		4.2 Install both java and apache tomcat, then configure the tomcat file as needed.
+		4.3 Inspection of apache tomcat directory
+			I. Starts with bin, files/scripts necessary to start the application are stored here
+			II. conf, configuration files for the apache tomcat server are stored here
+			III. logs, when we run into issues this is the place to look
+			IV. webapps, the apps we want to serve need to be stored here 
+		4.4 We need to package the app with jar(to war extension), mvn or gradle.
+		4.5 Move the .war file to webapps directory.
+			I. if the tomcat server is running, it will automatically detect and extract the files into a directory with the same name.
+		4.6 Lab:
+			I. Download the tar.gz file from the given link
+			II. Which scripts are used to start and stop tomcat on linux and then windows
+			III. Change the port of the apache tomcat web server and start it
+				- It is done through using the file at /conf/server.xml  
+			IV. Host the given .war package with the apache tomcat server then verify it
+			V. In which file we can see the unpackaging logs of the .war file.
+				- Used grep on the files in the logs directory.
+				- Turns out it was catalina
 	5. Python deploy flask app
+		5.1 We will look at deploying web applications developed in python.
+		5.2 Django and flask are some of the popular web frameworks for python.
+		5.3 We can run the web app with python main.py but this is for development purposes. To serve it on production environment, use production grade web servers.
+		5.4 Gunicorn, uwsgi, gevent and twisted web are some of the production-grade web servers		
+			I. gunicorn main:app -w 2
+		5.5 Labs:
+			I. Clone flask web repo
+			II. install the requirements for the python web app
+				- Caution: In production install application dependencies inside a virtual env
+			III. Find the version of pip used to install the requirements  
+			IV. app.py uses which port?
+				- use grep to find out
+			V. Change the serving port number of the app.py and start it
+			VI. Question about the python web application servers 	
+			VII. Deploy the given given app with gunicorn
+				- gunicorn app:app
+			VIII. Find out how many gunicorn processes are running
+				- "ps -ef | grep unicorn"
 	6. NodeJS deploy express app
+		6.1 In this section we will look at express.js which is a web framework that is based on node.js   
+		6.2 npm install is used to install the dependencies. It looks for the package.json file, locates the dependencies
+		then goes out to look for them.
+		6.3 To run the applicaton find the name of the main file then use for example "node app.js"
+		6.4 If there are scripts that prepare the environment, in that case for that to happen we use "npm run start" command, instead of "node app.js". That way npm locates the scripts that are needed to run to configure the environment in the package.json file, then runs them and potentially starts the application also.
+		6.5 If the web application crashes for some reason, then website cannot be reached. We need some sort of mechanism to manage this kind of stuff.
+			I. There are applications like pm2 and supervisord that take care of this problem.
+			II. Using process manager 2 (pm2) we can leave the availability to this tool instead.
+		6.6 Lab:
+			I. Clone the given github repo
+			II. Inspect its dependencies and answer the question
+			III. Inspect its scripts and answer the question
+			IV. Install the dependencies and run the application, another question is that to run the application in start:dev mode
+				- Done through "npm run start:dev"
+			V. Install pm2 with npm
+			VI. Start the application with pm2
+				- pm2 start app.js
+			VII. Start the application with pm2 but this time with 4 instances
+				- Delete the jobs before with delete sub-command. " pm2 delete <name>"
+				- Find the required option in the pm2 --help and start 
 	7. IPs and ports
-
-
+		7.1 There are different network interfaces and they can be assigned different ip addresses.
+		7.2 Ip address can be seen with "ip addr" command
+		7.3 There can be 65535 ports on each ip addresses. These ports are communication endpoints which the applications running on the system can listen for requests.
+		7.4 Applications could be configured to listen on a single ip address or all ip addresses.
+		7.5 While we are testing on local machine, we don't want to expose the port to the network so we don't configure it as such. Instead we use loopback address to test it.
+		7.6 Lab:
+			I. Configure tomcat to use 9090 port. I did it with sed, more convenient but check it with grep before also.
+			II. Go to app01 server and identify the ip address and the port the python web app is configured to serve.
+			III. Host the python app on just loopback ip address
+			IV. Check if we can reach the tomcat server on the host01 from the app01
+			V. Change the listening ip address of the python app on app01 server then run it
+			VI. Troubleshoot connectivity issues regarding the flask app on app01 from the host01
+				- host01 cannot reach the ip address given to the flask app, so changed it to the one it could reach.
+			
 Conclusion
 
-	1. 
-	2. 
+	1. The term app server/application server has always been vague to me and in this module i have seen the basics on them
+	2. Tomcat is used for java based applications and gunicorn is used for python based applications.
+	3. There is a binary called pm2(process manager 2) which is used for managing the javascript based applictions.
+	4. Tomcat and java web applications
+		4.1 Packaged apps are moved to the webapps directory. If the server is running it automatically starts the application.
+	5. Gunicorn and python web applications
+		5.1 Requirements are installed with "pip install -r requirements.txt" command line
+		5.2 "gunicorn app:app" is used to start the application
+		5.3 If the name of the main application file is app, then configure app.py file for ip and port definitions.
+	6. pm2, nodejs and express
+		6.1 To install requirements, use npm install. With this commands npm will look into the package.json file's spesific section then take instructions to continue installing the requirements.
+		6.2 Look at the package.json file, if there are scripts to be executed to prepare the application for a spesific context then take that into account.
+			- Start the app with "npm run start"
+			- If a spesific mode is to be started use "npm run start <mode_name"
+		6.3 To start the app normally, use "node app.js"
+		6.4 To use pm2 to manage the application use "pm2 start app.js"
+			- To spawn multiple instances, "pm2 start app.js -i <4>"		
 
 
