@@ -54,8 +54,28 @@ Process
 			V. How many tables exist in kk_db database?
 			VI. Create user
 			VII. Assign them privilieges 
-	3. MongoDB
-
+	3. MongoDB: In this section i will learn and then teach the following knowledge introduction of mongodb, installation, configuration, basic operations and troubleshooting.
+		3.1 Introduction: MongoDB is high performance, scalable and no-sql database. 
+			I. MongoDB stores data in json like documents gathered in collections. Collections then makes up the database.
+			II. Can store multiple databases
+		3.2 Installation
+			I. Tell the package management program where it may find the mongodb
+			II. Then install with it
+		3.3 Start the service and verify
+			I. systemctl start mongod
+			II. systemctl status mongod
+		3.4 Configuration
+			I. Configuration file is at /etc/mongod.conf
+		3.5 Interact with mongoDB using mongo shell
+			I. mongo: start shell
+			II. show dbs: list registered databases
+			III. use school: use school database
+			IV. db: show current database
+			V. db.createCollection("persons")
+			VI. db.persons.insert({"name":"John Doe", "Age":"45"...}
+			VII. db.persons.find({"name":"John Doe")
+		3.6 Lab:
+			I.  
 	
 
 
