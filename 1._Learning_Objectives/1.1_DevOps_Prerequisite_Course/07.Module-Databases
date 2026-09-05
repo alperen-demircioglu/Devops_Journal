@@ -1,0 +1,64 @@
+Introduction
+
+	1. This module is about databases, course claims they are essential for both cloud and devops engineering.
+		I. In this module, it seems that we are going to explore sql and no-sql databases and understand the basic differences between them.
+	2. This module consist of 3 sections; introduction, MySQL and MongoDB
+
+Process
+
+	1. Introduction-Databases
+		1.1 Why databases or learning about them is necessary for devops and cloud
+			I. Software development teams, develop software which later connect to the databases to store information. So they should have a good understanding of what databases are, what kind of databases exist and for what purposes, how do they work and when to use which.
+			II. Operations teams are responsible for infrastructure and databases are an important part of that. So they need to know how to deploy and how to troubleshoot connectivity issues regarding them. To be able to do all these, they need to have a basic understanding of databases, how they work and how they usually behave with system resources.
+			III. Devops engineer and cloud engineer roles have responsibility in these areas so they must knowabout databases from all these aspects.
+		1.2 SQL Databases
+			I. Data, information is stored in the tables which consist of rows and columns.
+			II. MySQL, postgreSQL, microsoft sql server are examples
+			III. SQL queries are used to retrieve information
+		1.3 NO-SQL 
+			I. Data, information is stored in files.
+			II. This way each entry gets its own file and this prevents the empty values which may exist in the sql tables
+			III. mongoDB, amazon dynamodb, cassandra and redis are examples
+			IV. no-SQL database queries are different from sql queries and each database product has different syntax 
+	2. MySQL
+		2.1 Famous websites like facebook, google and youtube use mysql. Ok, that is a valid reputation
+			I. Is open source, fast and reliable
+		2.2 Here we will see a client connect to the database, do some basic queries and troubleshoot basic connectivity issues.
+		2.3 Download, install and start the database service
+			I. wget
+			II. rpm -ivh
+			III. sudo dnf install mysql-server
+			IV. systemctl start mysqld
+			V. systemctl status mysqld
+		2.4 Check the logs for more information and default root password
+			I. When the mysql server starts for the first time it creates a random root password which can be found at /var/log/mysqld.log file.
+			II. Also in this file, logs regarding the daemon can be found.
+		2.5 Connect to the mysql database and change default password
+			I. mysql -u root -prandompwassword 
+			II. ALTER USER 'root'@'localhost' IDENTIFIED BY 'mypassword10';
+		2.6 View and create databases and tables
+			I. SHOW DATABASES;
+			II. USE school;
+			III. CREATE TABLE persons {....}
+			IV. INSERT INTO persons VALUES ("john Doe", 45, "New York");
+			V. SELECT * FROM persons;
+		2.7 Create users and assign them privileges
+			I. CREATE USER 'john'@'localhost' IDENTIFIED BY 'Mypassword5';  <---- Only from the localhost
+			II. CREATE USER 'john'@'%' IDENTIFIED BY 'MyPassword5';   <---- From every client
+			III. GRANT ALL PRIVILEGES TO *.* to 'john'@'%';
+		2.8 Lab:
+			I. SQL is relational database
+			II. What is the default data directory of mysql -> /var/lib/mysqld
+			III.  Install mysql on centOS and start the database
+			IV. Change the root password
+			V. How many tables exist in kk_db database?
+			VI. Create user
+			VII. Assign them privilieges 
+	3. MongoDB
+
+	
+
+
+
+Conclusion
+
