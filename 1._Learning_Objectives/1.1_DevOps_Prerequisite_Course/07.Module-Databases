@@ -75,10 +75,17 @@ Process
 			VI. db.persons.insert({"name":"John Doe", "Age":"45"...}
 			VII. db.persons.find({"name":"John Doe")
 		3.6 Lab:
-			I.  
-	
-
-
+			I. Which kind of database is mongoDB
+			II. MongoDB stores records as what format?
+			III. Does mongoDB provide official instlalers for both windows and linux
+			IV.  Head over to the mongodb website and follow the installation instructions for centos stream 8
+			V. Start mongodb service
+			VI. What is the version of mongodb
 
 Conclusion
 
+	1. I have had a coursa about sql so i was familiar with it to some extent but i have only just heard about such a thing called no-sql.
+		1.1 It was really helpful for me to get the gist of no-sql with mongodb.
+	2. We need to store the transactions, records which is created by the web and application server chain/stack somewhere. And that somewhere is the databases.
+	3. SQL database is table matrices and no-SQL databases may differ quite a bit but mongoDB is a document database and document type is json.
+	4. Depending on the nature/requirements/demands of developed application, appropriate web, application and finally databases are chosen. At this point, these are  pretty much determined meaning the know-how is really out there if you know what kind of application you have, you can easily determine the stack you need depending on the scale etc.
