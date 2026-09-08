@@ -1,0 +1,26 @@
+Introduction
+
+	1. This module named security is actually about TLS certification, it's components and the process behind it.
+	2. Module consist of just TLS basics and it's lab
+
+
+Process
+
+	1. SSL&TLS Basics
+		1.1 Symmetric encryption
+			I. Same key is used at both encrypting and decrypting the data
+		1.2 Asymmetric encryption
+			I. A pair of keys, public and private exists in this encryption
+			II. To give a concrete example, public key could be imagined as a public lock and private key still a regular key. Anyone can see the public lock(key) but only the owner would have the private key.
+			III. ssh-keygen binary is used for creating private keys and public locks.
+				- Then we can add the public lock to the target server's ~/.ssh/authorized_keys file 
+				- We can now use our private key to access to the target server.
+		1.3 Certificates
+			I. We can securely communicate with servers using asymmetric and symmetric encryption but we cannot rule out the possibility that the server we are communiticating with is malicious.
+			II. To ascertain that we are communicating with the server we intend to communicate, domain names are imprinted on the certificates and browsers checks whether the target server's domain name and the certificate it has provided aligns  
+
+
+Conclusion
+
+
+
