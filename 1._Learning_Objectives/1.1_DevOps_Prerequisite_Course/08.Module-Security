@@ -17,10 +17,25 @@ Process
 				- We can now use our private key to access to the target server.
 		1.3 Certificates
 			I. We can securely communicate with servers using asymmetric and symmetric encryption but we cannot rule out the possibility that the server we are communiticating with is malicious.
-			II. To ascertain that we are communicating with the server we intend to communicate, domain names are imprinted on the certificates and browsers checks whether the target server's domain name and the certificate it has provided aligns  
-
+			II. To ascertain that we are communicating with the server we intend to communicate, domain names are imprinted on the certificates and browsers checks whether the target server's domain name and the certificate it has provided aligns
+			III. Web browsers tells us if the certificates is secure and valid or not
+			IV. We create certificate signing request and private key then we send the csr to the CA(Certificate Authorities) CA's also have public and private keys. CA's sign the csr we have sent it and returns it to us. Browsers are able to verify the certificates signed by CA's since their public key is available to the internet/public
+			V. This whole process is named public key infrastructure
+			VI. public key/certificate's extensions are crt and pem, private key's extensions are key and pem
+		1.4 Lab:
+			I. What does ssl stand for
+			II. Which of the following encryption methods is considered more secure for use?	
+			III. Question comparing symmetric and asymmetric encryption?
+			IV. How to get a certificate trusted by browser?
+			V. More questions about CA's
+			VI. Create a keygen
+			VII. Create key and csr.
+			VIII. Create key and self signed certificate. And make apache use it
 
 Conclusion
+	
+	1. This module only had one SSL&TLS video and one lab. I have revisited symmetric keys, asymmetric key pairs, certificates and public key infrastructure concepts. Thinking about public keys as public locks made a lot sense as well
+	2. In the lab creating public key pair and making apache use them was kind of nice too.
 
 
 
