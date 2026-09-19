@@ -31,38 +31,18 @@ Aiming to acquire and master the necessary competencies to execute core responsi
    - [x] [KodeKloud - LFCS Preparation Course](https://learn.kodekloud.com/learn/courses/linux-foundation-certified-system-administrator-lfcs)
    - [x] [Killer.sh - LFCS Exam Simulator](https://killer.sh/lfcs)
    - [x] **LFCS Certification Exam (COMPLETED - OK)**
-2. Follow the KodeKloud DevOps training path
-	2.1 Basics
-		I. 12 Factor App
-		II. DevOps Prerequisite course
-		III. Fundamentals of DevOps
-	2.2 Learn Linux- Already did	
-		I. Linux for Beginners
-	 	II. Shell Scripts for Beginners
-	2.3 Learn programming
-		I.  Golang
-	 	II. Python Basics Course 	
-	2.4 Learn version control
-		I. Git for Beginners
-	2.5 Learn CI/CD Tools
-		I. Learn GitLab Actions
-	2.6 Learn container concepts
-		I. Docker for Absolute Beginners 
-	2.7 Learn container orchestration
-		I. Kubernetes for Beginners
-	2.8 Learn IaC
-		I. Terraform for Beginners
-		II. Learn more IaC
-	2.9 Advanced learning 
-		I. Helm for Beginners
-		II. Istio Service Mesh 
-		III. GitOps with ArgoCD
-		IV. Prometheus Certified Associate (PCA) 
-	2.10 Graduate
-		I. DevOps Interview Preparation Course 
 
-
-
+2. **Docker & OCI Container Architecture:**
+   - [ ] [KodeKloud - Docker Training Course for the Absolute Beginner](https://learn.kodekloud.com/learn/courses/docker-training-course-for-the-absolute-beginner)
+   - [ ] [DevOps Directive - Complete Docker Course (YouTube)](http://www.youtube.com/watch?v=RqTEHSBrYFw)
+3. **Kubernetes & Cloud-Native Orchestration:**
+   - [ ] [KodeKloud - Kubernetes and Cloud-Native Associate (KCNA)](https://learn.kodekloud.com/learn/courses/kubernetes-and-cloud-native-associate-kcna)
+   - [ ] [KodeKloud - Kubernetes for Absolute Beginners](https://learn.kodekloud.com/learn/courses/kubernetes-for-the-absolute-beginners-hands-on-tutorial)
+   - [ ] [KodeKloud - CKA Certification Course](https://learn.kodekloud.com/learn/courses/cka-certification-course-certified-kubernetes-administrator)
+   - [ ] **CKA Certification Exam**
+4. **Cloud Infrastructure (AWS):**
+   - [ ] [KodeKloud - AWS Solutions Architect Associate (SAA-C03)](https://notes.kodekloud.com/docs/AWS-Solutions-Architect-Associate-Certification/Introduction/Course-Overview/page)
+   - [ ] **AWS SAA Certification Exam**
 ---
 
 ## 🔬 Project Objectives
@@ -71,4 +51,3 @@ Aiming to acquire and master the necessary competencies to execute core responsi
 ---
 
 
-???END
