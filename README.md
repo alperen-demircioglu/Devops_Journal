@@ -47,26 +47,7 @@ Aiming to acquire and master the necessary competencies to execute core responsi
 
 ## 🔬 Project Objectives- Hands-On Labs
 
-- [ ] **Lab 1:** Guide-free, hardened Arch Linux bare-metal / VM deployment
-- [ ] **Lab 2:** Wazuh SIEM deployment with Docker / Docker Compose & host agent integration
-- [ ] **Lab 3:** LibreNMS deployment with Docker / Docker Compose & SNMP telemetry
-- [ ] **Lab 4:** Multi-node Kubernetes deployment hosting Wazuh SIEM, PLG Stack (Prometheus, Loki, Grafana), and LibreNMS
 
 ---
 
-## 📂 Documentation Methodology ("Raw to Refined")
 
-```text
- ┌─────────────────────────────────────────────────────────────┐
- │                      raw_process/                           │
- │  • Unfiltered logs, terminal debugging, break/fix moments   │
- │  • Root-cause analysis (RCA) and exploratory experiments    │
- └──────────────────────────────┬──────────────────────────────┘
-                                │
-                                │ (Refining, Verifying, Standardizing)
-                                v
- ┌─────────────────────────────────────────────────────────────┐
- │                    refined_process/                         │
- │  • Production-ready recipes, specifications, and manifests  │
- │  • Clean architectural blueprints and verification steps    │
- └─────────────────────────────────────────────────────────────┘
