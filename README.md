@@ -31,35 +31,48 @@ Aiming to acquire and master the necessary competencies to execute core responsi
    - [x] [KodeKloud - LFCS Preparation Course](https://learn.kodekloud.com/learn/courses/linux-foundation-certified-system-administrator-lfcs)
    - [x] [Killer.sh - LFCS Exam Simulator](https://killer.sh/lfcs)
    - [x] **LFCS Certification Exam (COMPLETED - OK)**
-2. Follow the KodeKloud DevOps training path
-	2.1 Basics
-		I. 12 Factor App
-		II. DevOps Prerequisite course
-		III. Fundamentals of DevOps
-	2.2 Learn Linux- Already did	
-		I. Linux for Beginners
-	 	II. Shell Scripts for Beginners
-	2.3 Learn programming
-		I.  Golang
-	 	II. Python Basics Course 	
-	2.4 Learn version control
-		I. Git for Beginners
-	2.5 Learn CI/CD Tools
-		I. Learn GitLab Actions
-	2.6 Learn container concepts
-		I. Docker for Absolute Beginners 
-	2.7 Learn container orchestration
-		I. Kubernetes for Beginners
-	2.8 Learn IaC
-		I. Terraform for Beginners
-		II. Learn more IaC
-	2.9 Advanced learning 
-		I. Helm for Beginners
-		II. Istio Service Mesh 
-		III. GitOps with ArgoCD
-		IV. Prometheus Certified Associate (PCA) 
-	2.10 Graduate
-		I. DevOps Interview Preparation Course 
+
+## 2. Follow the KodeKloud DevOps training path
+
+- [ ] **2.1 Basics**
+  - [ ] 12 Factor App
+  - [ ] DevOps Prerequisite course
+  - [ ] Fundamentals of DevOps
+
+- [x] **2.2 Learn Linux** *(Already did)*
+  - [x] Linux for Beginners
+  - [x] Shell Scripts for Beginners
+
+- [ ] **2.3 Learn Programming**
+  - [ ] Golang
+  - [ ] Python Basics Course
+
+- [ ] **2.4 Learn Version Control**
+  - [ ] Git for Beginners
+
+- [ ] **2.5 Learn CI/CD Tools**
+  - [ ] Learn GitLab Actions
+
+- [ ] **2.6 Learn Container Concepts**
+  - [ ] Docker for Absolute Beginners
+
+- [ ] **2.7 Learn Container Orchestration**
+  - [ ] Kubernetes for Beginners
+
+- [ ] **2.8 Learn IaC**
+  - [ ] Terraform for Beginners
+  - [ ] Learn more IaC
+
+- [ ] **2.9 Advanced Learning**
+  - [ ] Helm for Beginners
+  - [ ] Istio Service Mesh
+  - [ ] GitOps with ArgoCD
+  - [ ] Prometheus Certified Associate (PCA)
+
+- [ ] **2.10 Graduate**
+  - [ ] DevOps Interview Preparation Course
+
+
 
 
 
