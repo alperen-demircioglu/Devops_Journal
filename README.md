@@ -12,7 +12,7 @@ This repository serves as my personal engineering journal where I document my jo
 
 ### 🐧 Systems, Linux & DevOps Core
 * **Linux Expertise:** Solid knowledge and hands-on proficiency in Linux system internals, storage management (LVM), advanced networking, kernel tuning, and security hardening.
-* **Daily Hands-On DevOps:** Actively applying practical knowledge across Linux, Docker, and Kubernetes workflows.
+* **Daily Hands-On DevOps:** Actively applying practical knowledge across Linux and Docker workflows.
 * **Current Certification:** 🏆 **LFCS** (Linux Foundation Certified System Administrator) 
 
 ---
