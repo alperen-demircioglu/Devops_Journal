@@ -1,0 +1,82 @@
+Introduction
+    1. In this module we are going to deploy an e-commerce app on LAMP(Linux,Apache,MariaDB,PHP) stack.
+    2. This module consists of 3 sections. First one is theory and the remaining ones are labs.
+
+Process
+
+    1. E-Commerce App
+        1.1 There are total of 5 steps in setting up the environment. 
+            I. Set up firewall
+                - Install the application with package manager
+                - Start and enable the service for the application
+            II. Set up, configure MariaDB and configure the firewall
+                - Install the mariaDB
+                - Start and enable the service for the application
+                - configure the database
+                - configure the firewall so that it allows connections to the database
+            III. Set up Apache and PHP also configure the firewall
+                - Install apache, php and php-mysql connection binaries through package manager
+                - Start and enable the services for the applications
+                - Configure the apache/httpd file.
+            IV. Download the code repo
+                - Use git
+            V. Verify
+        1.2 This stack can be set up all on one server or different servers can be used. And in that case since the database and web application has to talk to each other,
+            configurations needs to be adjusted accordingly.
+        1.3 index.php which is located on the web server is responsible with communicating the the database. It includes the connection credentials and also the what is to be retrieved.
+    2. All in One Stack
+        2.1 Install MariaDB: 
+            I. sudo dnf install mariadb-server
+            II. sudo systemctl enable --now mariadb.service
+        2.2 Create a database with the given spesifications
+            I. sudo mariadb
+            II. CREATE database ecomdb;
+            III. CREATE USER 'ecomuser'@'localhost' IDENTIFIED by 'ecompassword'
+            IV. GRANT ALL PRIVILEGES ON ecomdb.* TO 'ecomuser'@'localhost'
+        2.3 Load the script
+            I. sudo mariadb < /opt/db-load-script.sql
+        2.4 Install the remaining packages
+            I. sudo dnf install httpd php php-mysqlnd
+        2.5 Change the index.html to index.php in httpd conf
+            I. sudo sed -i 's|index.html|index.php|g' /etc/httpd/conf/httpd.conf
+        2.6 Start and enable the httpd service.
+            I. sudo systemctl enable --now httpd.service
+        2.7 Download the code with git
+            I. cd /var/www/html
+            II. git init
+            III. git pull
+        2.8 Change the ip to the localhost
+            I. sudo sed -i 's|172.20.1.101|localhost|g' index.php
+        2.9 Visit the website
+            I. OK
+    3. Distributed Stack
+        3.1 Install MariaDB: 
+            -ssh db
+            I. sudo dnf install mariadb-server
+            II. sudo systemctl enable --now mariadb.service
+        3.2 Create a database with the given spesifications
+            I. sudo mariadb
+            II. CREATE database ecomdb;
+            III. CREATE USER 'ecomuser'@'%' IDENTIFIED by 'ecompassword';
+            IV. GRANT ALL PRIVILEGES ON ecomdb.* TO 'ecomuser'@'%';
+        3.3 Load the script
+            I. sudo mariadb < /opt/db-load-script.sql
+        3.4 Install the remaining packages
+            I. sudo dnf install httpd php php-mysqlnd
+        3.5 Change the index.html to index.php in httpd conf
+            I. sudo sed -i 's|index.html|index.php|g' /etc/httpd/conf/httpd.conf
+        3.6 Start and enable the httpd service.
+            I. sudo systemctl enable --now httpd.service
+        3.7 Download the code with git
+            I. cd /var/www/html
+            II. sudo git init
+            III. git pull
+        3.8 Change the ip to the db
+            I. sudo sed -i 's|172.20.1.101|db|g' index.php
+        3.9 Visit the website
+            I. OK
+
+Conclusion
+
+    1. In this module we have deployed a LAMP stack e-commerce app in both in an "all in one" and also in a "distributed" version.
+    2. Dividing up tasks then preparing the necessary commands and configurations made the process easier to understand for me.
