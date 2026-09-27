@@ -35,7 +35,7 @@ This repository serves as my personal engineering journal where I document my jo
 *Focuses on container concepts, cluster administration, networking policies, and observability.*
 
 - [ ] **Understand the Fundamentals of DevOps**
-  - [ ] DevOps Prerequisite course *(6h 30m)*
+  - [x] DevOps Prerequisite course *(6h 30m)*
   - [ ] Fundamentals of DevOps *(2h 30m)*
 - [ ] **Linux Scripting**
   - [ ] Shell Scripts for Beginners *(2h 0m)*
