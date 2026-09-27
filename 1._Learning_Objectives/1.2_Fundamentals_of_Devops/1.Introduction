@@ -1,0 +1,67 @@
+Introduction
+
+    1. Teacher's name is Micheal Forrester, there are no labs in this course and instead the course is taught by following a story.
+    2. This course consist of 6 modules
+        2.1 Introduction
+        2.2 What is Devops
+        2.3 People
+        2.4 Process
+        2.5 Product/Technology
+        2.6 Conclusion
+    3. Here we are in the first module and first module consist of 3 sections.
+        3.1 Why IT struggles
+        3.2 Birth and evolution of devops
+        3.3 Our journey through devops
+
+Process
+
+    1. Why IT struggles
+        1.1 There are different roles with different responsibilities and focus.
+        1.2 All of these roles come together to create the product which the client hopefully needs and will pay for.
+        1.3 When both the team, company and the product is small it is easy to align and communicate with each other.
+        1.4 As the company grows larger, different roles and teams may not be in sync and then stop communicating altogether because of the problems.
+        1.5 This is where the devops mindset and culture comes in to provide a structure, framework and reality for people on the company to understand 
+        that they together make or break the product, value the company is shipping.
+    2. The birth and evolution of devops
+        2.1 In 2009 john allspaw and paul hammond  presentation. Later patrick debois put together the devops days.
+        2.2 The pheonix project
+        2.3 How can we deliver better, faster and more compliant software.
+        2.4 DevOps handbook
+        2.5 The unicorn project
+        2.6 Agile/lean
+        2.7 Effective devops book
+        2.8 DevOps adoption book
+        2.9 Define and standardize processes, later find ways to automate them so that everything is integrated like a factory line. I think, this is the soul of devops.
+    3. Our journey through devops
+        3.1 This section is an overview of this course
+            I. There will be 8 different stories that are about common conflicts within the IT teams and the devops solutions for them
+        3.2 Introduction
+            I. Why IT struggles
+            II. The birth and evolution of devops
+            III. Our journey through devops: we are here
+        3.3 What is Devops
+            I. Definition of devops
+            II. Antipatterns of devops
+            III. Frameworks around devops
+        3.4 People
+            I. Culture
+            II. Shared values
+            III. Focusing teams vs roles
+        3.5 Process
+            I. Automation
+            II. Lean
+            III. Collaboration and information sharing
+        3.6 Technology
+            I. Measurement and metrics
+            II. Technology patterns
+        3.7 Conclusion
+            I. The value of devops
+            II. Your story
+
+Conclusion
+
+    1. This course sets out to explain what is devops, what problem does it solve/why it was invented and how does it do that?
+    2. The teacher is Micheal Forrester, he has 30 years experience in the IT field and actually applied the stuff he is teaching to solve business problems in the IT.
+    3. So we are in good hands.
+
+
