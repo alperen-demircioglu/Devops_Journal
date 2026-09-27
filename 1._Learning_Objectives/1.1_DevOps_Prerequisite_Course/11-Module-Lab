@@ -1,0 +1,39 @@
+Introduction
+
+    1. In the 10th module of this course, we are going to learn about setting our own home lab.
+        1.1 Since i have done this before and know about it, i think i will be speed running through it.
+    2. There are 4 sections in this module: virtualbox, virtualbox connectivity, virtualbox networking and vagrant.
+        2.1 Vagrant is the only one i do not know about but i do think that it's fallen out of favor currently and is obsolete.
+
+Process
+
+    1. Virtual Box
+        1.1 Type 2 hypervisors are virtualbox and vmware workstation. In the course virtualbox is favored since the it has a lot more features compared to the free version of wmware.
+        1.2 Fast forward 2026, wmware workstation pro is free for personel use and that means there are no restrictions on it. So it could be used as well.
+    2. Virtual Box Connectivity
+        2.1 VM's can be started in a couple of modes: detached, headless and normal. In normal mode an additional monitor pops up and it is just as showing the physical screen of a computer.
+        2.2 In headless mode VM starts without monitor and it can only be reached through ssh or rdp.
+        2.3 In detachable mode, VM starts with monitor but the monitor can be closed without closing down the VM.
+    3. Virtual Box Networking
+        3.1 NAT Network
+            I. A LAN is created inside the VM and each VM can access to other networks through the IP address of host machine.
+        3.2 NAT
+            I. Each VM can access to other networks through the IP address of host machine but not to each other. More isolation.
+        3.3 Bridge Network
+            I. A LAN network of VM is created and it is as if they are connected/bridged to the physical LAN of the host machine. So they get ip addresses from the same subnet as the host machine.
+        3.4 Host only
+            I. A LAN is created inside the VM, VM's can only talk with each other and with the host machine
+        3.5 Internal network
+            I. A LAN is created inside the VM, VM's can only talk with each other. Not even with the host machine.
+        3.5 Internet connectivity
+            I. NAT: Possible
+            II. Bridge: Possible
+            III. Host only: Possible with ip forwarding
+            IV. Internal network: Not possible
+    4. Vagrant
+        4.1 Just omitted it since is obsolete.
+
+Conclusion
+
+    1. I already knew about creating VM's with both virtual box and vmware pro. So i speed ran the whole thing.
+    2. But i did not spent time on the type of networks for the VM so that section really made sense.
