@@ -1,6 +1,6 @@
 # kubectl Cheatsheet (CKA)
 
-## Sınav başında kurulum
+## Setup at the start of the exam
 
 ```bash
 alias k=kubectl
@@ -10,7 +10,7 @@ export do="--dry-run=client -o yaml"
 export now="--force --grace-period 0"
 ```
 
-## YAML üretme (dry-run)
+## Generating YAML (dry-run)
 
 ```bash
 k run nginx --image=nginx $do > pod.yaml
@@ -25,7 +25,7 @@ k create role r1 --verb=get,list --resource=pods
 k create rolebinding rb1 --role=r1 --user=jane
 ```
 
-## Faydalı komutlar
+## Useful commands
 
 ```bash
 k explain pod.spec.containers --recursive
@@ -38,15 +38,15 @@ k auth can-i create pods --as jane
 k top node; k top pod
 ```
 
-## Troubleshooting sırası
+## Troubleshooting order
 
 1. `k get nodes`, `k describe node <node>`
 2. `systemctl status kubelet`, `journalctl -u kubelet -f`
-3. `/etc/kubernetes/manifests/` (static pod'lar: apiserver, scheduler, controller-manager, etcd)
+3. `/etc/kubernetes/manifests/` (static pods: apiserver, scheduler, controller-manager, etcd)
 4. `crictl ps`, `crictl logs <id>`
 5. `k describe pod`, `k logs`, `k get events`
 
-## etcd yedekleme / geri yükleme
+## etcd backup / restore
 
 ```bash
 ETCDCTL_API=3 etcdctl snapshot save /opt/snap.db \
@@ -58,16 +58,16 @@ ETCDCTL_API=3 etcdctl snapshot save /opt/snap.db \
 etcdutl snapshot restore /opt/snap.db --data-dir /var/lib/etcd-restore
 ```
 
-## kubeadm upgrade (özet)
+## kubeadm upgrade (summary)
 
 ```bash
 kubeadm upgrade plan
 kubeadm upgrade apply v1.xx.x        # control plane
 kubeadm upgrade node                 # worker
 kubectl drain <node> --ignore-daemonsets
-# kubelet + kubectl paketlerini güncelle, sonra:
+# upgrade the kubelet + kubectl packages, then:
 systemctl daemon-reload && systemctl restart kubelet
 kubectl uncordon <node>
 ```
 
-> Not: Komutları ve sürüm numaralarını sınav öncesi dokümantasyondan teyit et.
+> Note: Verify commands and version numbers against the documentation before the exam.

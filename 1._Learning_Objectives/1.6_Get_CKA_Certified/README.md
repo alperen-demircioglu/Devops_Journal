@@ -1,43 +1,43 @@
 # ☸️ CKA - Certified Kubernetes Administrator
 
-Hedef: **Aralık 2026** sınavı.
+Goal: take the exam in **December 2026**.
 
-## Sınav Bilgileri
+## Exam Info
 
-- Sınav tarihi: _(buraya yaz)_
-- Süre: 2 saat, uygulamalı (canlı cluster'larda terminal)
-- Geçme puanı: %66
-- Sınavda izin verilen kaynak: kubernetes.io dokümantasyonu
-- Güncel müfredat ve ağırlıklar için kaynak: CNCF CKA Curriculum (sınavdan önce tekrar kontrol et)
+- Exam date: _(fill in)_
+- Duration: 2 hours, hands-on (terminal on live clusters)
+- Passing score: 66%
+- Allowed resource during the exam: kubernetes.io documentation
+- Source for the current curriculum and weights: CNCF CKA Curriculum (re-check before the exam)
 
-## Müfredat Ağırlıkları
+## Curriculum Weights
 
-| Alan | Ağırlık | Durum |
-|------|---------|-------|
+| Domain | Weight | Status |
+|--------|--------|--------|
 | Cluster Architecture, Installation & Configuration | 25% | ⬜ |
 | Workloads & Scheduling | 15% | ⬜ |
 | Services & Networking | 20% | ⬜ |
 | Storage | 10% | ⬜ |
 | Troubleshooting | 30% | ⬜ |
 
-## Kaynaklar
+## Resources
 
-- KodeKloud: Kubernetes for Beginners, CKA kursu, Ultimate CKA Mock Exam
-- Killer Coda: CKA senaryoları
-- Killer.sh: sınav simülatörü (sınav kaydıyla gelen oturumlar)
-- kubernetes.io dokümantasyonu (sınavda kullanılacak, aramaya alış)
+- KodeKloud: Kubernetes for Beginners, CKA course, Ultimate CKA Mock Exam
+- Killer Coda: CKA scenarios
+- Killer.sh: exam simulator (sessions included with the exam registration)
+- kubernetes.io documentation (will be used during the exam, get used to searching it)
 
-## İlerleme
+## Progress
 
-| Hafta | Tarih aralığı | Konu | Kaynak | Durum |
-|-------|---------------|------|--------|-------|
+| Week | Date range | Topic | Resource | Status |
+|------|------------|-------|----------|--------|
 | 1 | | | | ⬜ |
 
-_Haftalık plan, sınav tarihi ve haftalık çalışma saati netleşince doldurulacak._
+_The weekly plan will be filled in once the exam date and weekly study hours are settled._
 
-## Klasör Yapısı
+## Folder Structure
 
-- `notes/`: konu bazlı notlar
-- `labs/`: KodeKloud / Killer Coda lab çözümleri
-- `cheatsheet.md`: kubectl kısayolları ve YAML iskeletleri
-- `mistakes.md`: mock ve simülatörde yapılan hatalar
+- `notes/`: topic-based notes
+- `labs/`: KodeKloud / Killer Coda lab solutions
+- `cheatsheet.md`: kubectl shortcuts and YAML skeletons
+- `mistakes.md`: mistakes made in mocks and the simulator (add with `./mistake.sh`, it prompts for each field)
