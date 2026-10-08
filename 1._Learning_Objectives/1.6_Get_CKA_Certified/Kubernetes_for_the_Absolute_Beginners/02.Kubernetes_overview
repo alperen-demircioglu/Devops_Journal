@@ -1,0 +1,62 @@
+Introduction
+
+	1. There are 5 videos in this module.
+	2. Videos in this module explains the inception of containers and container orchestration.
+
+Process
+
+	1. Containers overview
+		1.1 Before containers every application had to live directly on the operations system.
+		1.2 As we know, software architecture is a complex and detailed which consist of many components.
+		1.3 Since different applicatons require different libraries and maybe os's, it becomes a painful task to manage their compability as the complexity of the system increases.
+		1.4 VM's provide more isolation at the expense of more resources and containers are vice versa
+		1.5 Linux kernel may host many containerized linux distros since they share the same kernel
+		1.6 Image is the template and container is the running instance of it Image is the template and container is the running instance of it.
+		1.7 Today most organization provide their products in the form of containers with all required dependencies on dockerhub  
+	2. Container orchestration
+		2.1 As all technologies/products do, containers also require a way to be managed.
+		2.2 And this is done with container orchestration, introducing the ability to scale up, down, load balance, centrally manage and track the containers.
+	3. Kubernetes architecture
+		3.1 Node: Physical or virtual machine where the kubernetes is installed
+		3.2 Cluster: A set of nodes clustered together.
+		3.3 Master: Another node kubernetes installed in it which is responsible for managing the worker nodes.
+		3.4 Components: 
+			I. etcd: Stores all data used to manage the cluster in a distributed way.
+			II. Kubelet: Runs on each node on the cluster like an agent and makes sure the nodes are working as expected
+			III. Container runtime: Underlying software used to run containers
+			IV. Controller: Controls, manages the worker nodes and makes decions.
+			V. Scheduler: Distribute work across nodes like taskmaster
+			VI. API server: Frontend for kubernetes, to interact with the cluster
+		3.5 Master vs workes nodes: How master and worker nodes are different
+			I. Master nodes have the components a master requires api-server, etc, controller, scheduler
+			II. Worker nodes have the containerd runtime and kubelet
+		3.6 Kubectl: Command line utility
+			I. Use to deploy and manage applications on a cluster.
+			II. Get cluster and application information
+			III. kubectl cluster-info and get nodes.  
+	4. Docker vs containerd
+		4.1  Docker: Popular container product
+			I. Is not just a container runtime alone
+			II. It is a complete platform
+		4.2  Rkt: Container product which also exists
+		4.3  Kubernetes: Started as a tool for managing docker. 
+			I. Then as it got more popular, other containerization products wanted to join
+			II. So the kubernetes needed to support them as well
+			III. They needed to find a way to do that. So they introduced container runtime interface and that allowed for any product that adheres to the OCI to be managed by kubernetes.
+			IV. At the and they ditched docker as a platform to use containerd instead.
+		4.4  Containerd
+			I. runc'yi yönetmekte kullanılan koşma zamanı yöneticisiydi
+			II. Zaman içinde ayrı bir proje olarak devam etti 
+			III. Tek başına indirilebilir ve crictl ile kullanılabilir
+			IV. ctr is for debugging
+			V. nerdctl is general purpose like docker
+			VI. crictl is used for debugging cri compatible container 
+	5. A note on docker deprecation
+		5.1 Docker is still relevant for demonstration purposes
+	6. Lab
+		6.1 kubectl get nodes
+		6.2 kubectl cluster-info
+Conclusion
+	1. In this course i have got a brief about the kubernetes, and overview.
+	2. What problem does kubernetes solve, and what problem does the containers solve, how the kubernetes project progressed over the years.
+	3. Old runtime of kubernetes and the current one.
