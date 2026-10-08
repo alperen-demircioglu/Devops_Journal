@@ -85,3 +85,13 @@ token.txt
 *.tfstate
 *.tfstate.*
 .terraform.lock.hcl
+
+# ==========================================
+# 5. MCP / Tool Configs (may contain tokens)
+# ==========================================
+.mcp.json
+
+# ==========================================
+# 6. Third-party copyrighted course material (local only)
+# ==========================================
+kodekloud-k8s-beginners-notes/
