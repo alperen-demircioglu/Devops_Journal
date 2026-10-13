@@ -1,0 +1,107 @@
+Introduction
+
+	1. I am going to explain the contents of https://kubernetes.io/docs/concepts/ in this document.	
+	2. There are a total of 14 concepts in the target subject.
+
+Process
+
+	1. Overview
+		1.0 Overview
+			I. For what kubernetes is used
+				- It is basically used for the automation of container system administration.
+				- Everything that needs to be done is first determined, standardized as a set of steps and then is automated. And this is built-in for the kubernetes.
+				- What it actually handles, everything about a container.
+				- Deployment, termination, healthcheck, networking, load balancing, auto-scaling, storage, system resource management, self-healing based on healthcheck, secret management.
+			II. What kubernetes is not
+				- It is not a rigid platform as a service. Each and every component is designed to give the user flexibility.
+				- Does not limit the types of application that may run on kubernetes. If it can run on container then it should run great on kubernetes
+				- It is not a CI/CD system. Does not build source code and deploy it.
+				- Does not dictate logging, monitoring and alerting solutions. You may choose whatever you want.
+				- Does not dictate a configuration language. Same as above.
+				- Does not dictate a comprehensive machine configuration, self-healing, maintenance and management systems.
+				- Does not provide application level services such as middleware(like message buses), data processing frameworks(for example spark), databases(like mysql), caches, nor cluster storage systems(for example ceph) as built-in services. These components can run on kubernetes, or can be accessed by the apps running on kubernetes through portable mechanisms, such as the Open Service Broker.
+			III. Historical context for kubernetes
+				- Physical machine era
+				- Hardware virtualisation era
+				- Application virtualisation era
+		1.1 Kubernetes components
+			I. Core components
+				- Control plane components
+					* api server: exposes http api for communication
+					* controller manager: controls the current state of nodes/apps and moves them to the desired state if not compliant.
+					* cloud controller manager
+					* etcd: consistent and highly available storage
+					* scheduler: assigns each pod to a node
+				- Node components
+					* kubelet: ensures the pods and applications are running
+					* kube proxy: implements network rules
+					* container runtime: software responsible for running containers
+			II. Addons
+				- DNS: cluster wide dns resolution
+				- Web ui
+				- Centralized resource monitoring: collect and store container metrics
+				- Cluster level logging: store container logs to a centralized place.
+			III. Flexibility in architecture
+				- Continues to brag about how flexible the system is. 
+		1.2 Objects in kubernetes: Kubernetes system/apiserver is based on it's objects. These objects are used for both representing and defining the kubernetes system. We could say kubernetes system consist of these objects.
+			I.  Overview: apiVersion, kind, metadata and spec objects are used to define a manifest.
+			II. Kubernetes object management
+				- Imperative approach: Using kubectl command to interact with the live system
+				- Declarative approach: Using yaml files
+				- Both system has advantages and disadvantages over the other
+			III. Object names and id's
+				- Names must be unique for each kind of object.
+				- Names must adhere to the naming standards of dns protocol.
+				- Names are names given to an object, so that it is known by that =). 
+			IV. Labels and selectors
+				- Labels are used for labeling things so that we can create an inventory, observe and manage things conveniently.
+				- Selectors are label selectors which are basically filters, so we can filter the desired label to be able reach the desired deployments and pods.
+			V. Namespaces
+				- Are used for dividing cluster resource for different users. If there are not a lot users then using this feature is not functional. Uset it when it is required
+			VI. Annotations
+				- In metadata field, one may create a subfield "annotation" and place the desired information. 
+			VII. Field selectors
+				- This again is a filter and using this we can select the desired kubernetes objects in our cluster.
+				- Supported fields are in the documentation 
+			VIII. Finalizers
+				- They are basically termination control mechanisms. When an object is prompted for termination, if it has finalizer fields in its metadata then this simply means there are a set of instructions which needed to be completed before the termination is in place.
+			IX. Owners and dependents
+				- Objects may have one or more owners and also may have a dependants. When the owner ceases to exist, garbage collector by default terminates it's dependants.
+			X. Recommended labels
+				- name: name of the application -> mysql
+				- instance: uniqure name for the instance -> mysql-123
+				- version: version of the applicaton -> 5.7.2
+				- component: front-end/back-end/database -> database
+				- part-of: project name -> wordpress
+				- managed-by: helm
+			XI. Storage versions
+				- Etcd stores the objects in kubernetes in a special way.
+				- To be able to incorporate different tools we need to define custom resource file and to be able to store that manifest file we also need to be able to make different storage versions available. 
+		1.3 The kubernetes api
+			I. Communication with kubernetes cluster is done through interacting with api server.
+			II. To query and modify kubernetes objects one must interact with the api server.
+			III. For this there are two types of api endpoints. Discovery api and openapi endpoints
+			IV. Discovery api is for advertising basic information about the cluster
+			V. Openapi is for providing complete and detailed schema for communicating with the endpoints
+		1.4 The kubectl command line tool: Primary command-line tool for communicating with the kubernetes cluster
+			I. Communicates with the api server to query and manage kubernetes objects.
+			II. Administration of kubernetes objects(create,query, update, delete) can be done with kubectl. Node, control plane and etcd is out of kubectl's scope. 
+	2. Cluster architecture
+	3. Containers
+	4. Workloads
+	5. Service, load balancing and networking
+	6. Storage 
+	7. Configuration
+	8. Security
+	9. Policies
+	10. Scheduling, preemtpion, eviction
+	11. Resource management 
+	12. Cluster administration
+	13. Windows in kubernetes
+	14. Extending kubernetes
+	
+	
+
+Conclusion
+
+	

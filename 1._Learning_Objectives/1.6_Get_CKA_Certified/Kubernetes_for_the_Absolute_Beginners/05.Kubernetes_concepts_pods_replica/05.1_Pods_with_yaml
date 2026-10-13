@@ -1,0 +1,37 @@
+Introduction
+
+	1. This module consist of 3 sections and this is the first section.
+	2. In this section, creating pods from yaml configuration files is being taught.
+
+Process
+
+	1. Pods with YAML
+		1.1 Yaml structure for a pod
+			apiversion: v1
+			kind: Pod
+			metadata:
+			  name: myapp-pod
+			  labels:
+			    app: my-app
+			    type: front-end
+			spec:
+			  containers:
+			    - name: nginx-container
+			      image: nginx
+		1.2 kubectl create -f pods.yaml
+		1.3 kubectl get pods
+		1.4 kubectl describe pod myapp-pod
+	2. Demo- Pods with yaml
+		2.1 Nothing new 
+	3. Demo- yaml tips
+		3.1 Use visual studio code for yaml autocompletion
+			I. Install YAML extension by REDHAT
+			II. To configure go to settings of the said extension and find yaml: schemas and click the "edit in settings.json"
+			III. place the "kubernetes": "/*.yaml" , it even autocompletes before
+		3.2 
+
+		
+
+Conclusion
+
+	

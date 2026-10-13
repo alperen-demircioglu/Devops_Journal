@@ -1,0 +1,55 @@
+Introduction
+
+	1. This section is about replicationcontrollers and replicasets which are the brains of the kubernetes system.
+	2. They monitor the pods and take action based on the configuration file
+
+Process
+
+	1. Replicationcontroller
+		apiVersion: v1
+		kind: ReplicationController
+		metadata:
+		  name: myapp-rc
+		  labels:
+		    app: myapp
+		    type: front-end
+		spec:
+		  template:
+		    
+		    metadata:
+		      name: myapp-pod
+		      labels:
+		        app: myapp
+		        type: front-end
+		    spec:
+		      containers:
+		      - name: nginx-container
+		        image: nginx
+		  replicas: 3
+	2. ReplicaSet
+		apiVersion: apps/v1
+		kind: ReplicaSet
+		metadata:
+			name: myapp-replicaset
+			labels:
+				app: myapp-pod
+				type: front-end
+		spec:
+			template:
+				metadata:
+					name: myapp-pod
+					label: front-end
+				spec:
+					containers:
+						- name: nginx-container
+						  image: nginx
+			replicas: 3
+			selector:
+				matchLabels:
+					type: front-end
+	3. I am going to create yaml files inside this directory to create replica manifest files.
+
+Conclusion
+
+
+
